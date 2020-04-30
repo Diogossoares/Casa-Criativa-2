@@ -10,7 +10,9 @@
         <div id ="container">
             <div id="intro">
                 <header>
+                    <a href="index.html">
                     <img src="logo.pmg" alt="imagem da logomarca">
+                </a>
                 </header>         
                 <main>
                     <p>
@@ -24,14 +26,15 @@
                     </p>
                 </main>
                 <section id="button">
-                    <button onclick="on0ff()">+ Adicionar Ideia</button>
-                    <button class="fat">Ver Ideias</button>
+                    <button onclick="addCard()">+ Adicionar Ideia</button>
+                    <a href="ideias.html"class="fat">Ver Ideias</a>
                 </secton>
+           
                 <footer>
-                    Com ♥️ <a href="http://rocketseat.com.br">Rocketseat</a>
+                    Com ♥️ <a href="http://rocketseat.com.br"target="blank">Rocketseat</a>
                 </footer>        
             </div>
-            <div id="last-ideias">
+            <div id="last-ideas">
                 <div class="idea">
 
                     <img 
@@ -116,20 +119,23 @@
                     <input type="text"mane="link">
                 </div>
 
-              
-               <a href="#"onclick="on0ff()">Voltar</a>
-               <button>Salvar</button>
-              
-
-
-          
-
+                <div class="bnt-vt">
+                    <button href="#"onclick="addCard()">Voltar</button>
+                    <button class="btn-left">Salvar</button>
+                </div>
             </form>
         </div>
     </div>
 
 
 
-        <script src="scripts.js"></script>
+        <script >
+        
+        function addCard(){
+            document.querySelector("#modal").classList.toggle("hide")
+        }
+        
+        
+        </script>
     </body>     
 </html>
