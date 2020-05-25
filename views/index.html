@@ -35,55 +35,24 @@
                 </footer>        
             </div>
             <div id="last-ideas">
-                <div class="idea">
 
-                    <img 
-                        src="https://image.flaticon.com/icons/svg/2729/2729007.svg"
-                        alt="imagem de curso de programação"
-                    />
-                    <div class="content">
-                        <h3>Curso de programação</h3>
-                        <p>Estudo</p>
-                        <div class="description">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid rem, facilis asperiores dolorum reiciendis voluptates illum totam, reprehenderit corporis hic dolorem ipsam corrupti autem eaque nemo quia. Tenetur, nulla esse!
-                            <a href="#">Ir para a ideia</a>
-                        </div> 
-                    </div>
-                </div>    
-                <div class="idea">
+            {% for idea in ideas %}
+            <div class="idea">
 
-                    <img 
-                        src="https://image.flaticon.com/icons/svg/2729/2729005.svg"
-                        alt="imagem de Exercícios"
-                    />
-                    <div class="content">
-                        <h3>Exercícios</h3>
-                        <p>Saúde</p>
-
-                        <div class="description">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid rem, facilis asperiores dolorum reiciendis voluptates illum totam, reprehenderit corporis hic dolorem ipsam corrupti autem eaque nemo quia. Tenetur, nulla esse!
-                            <a href="#">Ir para a ideia</a>                        
-                        </div>
-                    </div>
-                </div>         
-                <div class="idea">
-                   
-                    <img 
-                        src="https://image.flaticon.com/icons/svg/2729/2729027.svg"
-                        alt="imagem de Meditação"
-                    />
-                    <div class="content">
-                        <h3>Meditação</h3>
-                        <p>Mentalidade</p>
-                
-                        <div class="description">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid rem, facilis asperiores dolorum reiciendis voluptates illum totam, reprehenderit corporis hic dolorem ipsam corrupti autem eaque nemo quia. Tenetur, nulla esse!
-                            <a href="#">Ir para a ideia</a>
-                        </div>
-                    </div>
+                <img src="{{idea.img}}" all="image de {{idea.title}}">
+                 
+                <div class="content">
+                    <h3>{{idea.title}}</h3>
+                    <p>{{idea.category}}</p>
+                    <div class="description">
+                        {{idea.description}}
+                        <a href="{{idea.url}}" target="_blank"> Ir para a Ideia</a>
+                    </div> 
                 </div>
-            </div>
-        </div>
+
+            {% endfor %}
+
+                
         
         
         <!--Modal-->
