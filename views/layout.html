@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta hcharset="utf-8" />
+        {% block title %}
+        <title>Casa Criativa Ateli�</title>
+        {% endblock title%}
+        
+        {% include "head.html"%}
+        </head>
+
+    <body id="{{ bodyid }}">
+        <div id ="container">
+            {% block content %}
+             {% endblock %}
+        </div>
+
+        {% include "modal.html"%}
+
+        <script > 
+        function addCard(){
+            document.querySelector("#modal").classList.toggle("hide")
+        }
+        </script>
+    </body>     
+</html>
